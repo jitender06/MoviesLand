@@ -1,0 +1,141 @@
+.header {
+  margin: 0 2.5rem;
+  padding: 0.9rem 2.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+a > span {
+  margin: 0 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+}
+
+a > span:hover {
+  color: red;
+}
+
+.header__icon {
+  cursor: pointer;
+  font-size: 1.9rem;
+  letter-spacing: 0.9px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 211, 180, 1) 0%,
+    rgba(249, 211, 180, 0.4) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.user__avatar {
+  font-size: 2rem;
+}
+.formstyle {
+  position: relative;
+  display: flex;
+}
+
+.formstyle input {
+  background: none;
+  background: linear-gradient(35deg, #494949, #313131);
+  font-size: 1rem;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.formstyle svg {
+  position: absolute;
+  font-size: 1.3rem;
+  right: -20px;
+  bottom: 7px;
+}
+
+.menu {
+  display: none;
+}
+.mobile_nav span {
+  display: none;
+}
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .mobile_menu {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+  .mobile_nav span {
+    color: black;
+    display: block;
+  }
+
+  .desktop_nav {
+    display: none;
+  }
+
+  .mobile_navbar {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu {
+    font-size: 2rem;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    padding: 0.9rem 1rem;
+    margin: unset;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  .header__icon {
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+  }
+  .formstyle input {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .formstyle svg {
+    font-size: 1rem;
+    right: -7px;
+    bottom: 5px;
+  }
+  .search {
+    width: 8rem;
+  }
+}
