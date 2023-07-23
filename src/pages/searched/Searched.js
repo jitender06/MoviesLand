@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Searched() {
   const [movies, setMovies] = useState([]);
-  let params = useParams();
+  let { search } = useParams();
 
   const getSearched = async (name) => {
     const response = await fetch(
@@ -19,8 +19,8 @@ function Searched() {
   };
 
   useEffect(() => {
-    getSearched(params.search);
-  }, [params.search]);
+    getSearched(search);
+  }, [search]);
 
   // for skeleton display before the api data display
   const [isLoading, setIsLoading] = useState(true);
